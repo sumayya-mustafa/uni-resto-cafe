@@ -16,7 +16,6 @@
       <dishButton class="dish_buttons"></dishButton> 
       <p v-if="item.addonCat.length" class="dish_custom_option"> Customizations Available </p>
     </div>
-    <!-- <div class="dish_images" style="background-image: url(item.dish_image)"></div> -->
     <img :src="item.dish_image" class="dish_images">
   </li>
 </ul>

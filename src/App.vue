@@ -8,23 +8,13 @@
 import Header from './components/header.vue'
 import tabbedView from './components/tabbedView.vue'
 
-// var store = {
-//   state : {
-//     cart :[]
-//   }
-// }
 export default {
   name: 'App',
   components: {
     Header,
     tabbedView
   }
-  // data(){
-  //   return{
-  //     store:store,
-  //   }
-    
-  // }
+
 }
 </script>
 

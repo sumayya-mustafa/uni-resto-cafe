@@ -26,7 +26,7 @@ export default{
       })
       .then((jsonData) => {
         this.restuarant_name = jsonData[0].restaurant_name
-        console.log(jsonData)
+        
        })
   }
 }
