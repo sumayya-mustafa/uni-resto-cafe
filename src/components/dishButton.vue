@@ -22,8 +22,12 @@ console.log(this.count)
 return this.count
 },
 minusButtonClick: function(){
-this.$store.state.cartcount--;
-this.count = this.count - 1;
+if(this.count > 0){
+	this.$store.state.cartcount--;
+}
+if(this.count > 0){
+	this.count = this.count - 1;
+}
 console.log(this.count)
 return this.count
 }

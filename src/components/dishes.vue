@@ -9,7 +9,6 @@
             <p><b>{{ item.dish_currency }}{{ item.dish_price }}</b></p>
             </div>
             <div class="dish_cal_detail">
-            
             <p><b>{{ item.dish_calories }} calories</b></p> 
             </div>
       </div>

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <tabs>
-        <tab v-for="item in categories" v-bind:key="item.menu_category_id" :name="item.menu_category">
-            <dishes  :data="item.category_dishes"></dishes>
+    <tabs :options="{defaultTabHash:'tab-0'}">
+        <tab v-for="(item,index) in categories" v-bind:key="item.menu_category_id" :name="item.menu_category" :id="['tab-'+index]">
+          <dishes  :data="item.category_dishes"></dishes>
         </tab>
     </tabs>
   </div>
@@ -18,6 +18,7 @@ export default{
   },
   data() {
     return {
+    selected:"",
     categories: []
       
     }
@@ -31,7 +32,10 @@ export default{
       })
       .then((jsonData) => {
           console.log(jsonData)
-        this.categories = jsonData[0].table_menu_list
+        this.categories = jsonData[0].table_menu_list;
+        this.selected = jsonData[0].table_menu_list[0].menu_category;
+        console.log(this.selected)
+
       })
   }
 }
