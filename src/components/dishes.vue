@@ -6,7 +6,7 @@
       <div class="dish_detail">
             <div class="dish_name_detail">
             <p><b>{{ item.dish_name }}</b></p>
-            <p><b>{{ item.dish_currency }}{{ item.dish_price }}</b></p>
+            <p><b>{{ item.dish_currency }}&nbsp;{{ item.dish_price }}</b></p>
             </div>
             <div class="dish_cal_detail">
             <p><b>{{ item.dish_calories }} calories</b></p> 
@@ -41,16 +41,17 @@ export default{
   }
 }
 </script>
-<style scoped>
+<style>
 li{
   display: flex;;
   justify-content: space-between;
-  padding-bottom: 20px;
+ 
 }
 .dish_detail_wrap{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+   padding-bottom: 10px;
 }
 .dish_detail{
   display: flex;;
@@ -61,9 +62,11 @@ li{
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  text-align: left;
 }
 .dish_description{
   margin-top: 20px;
+  text-align: left;
 }
 p{
   margin: 0px;
@@ -77,5 +80,42 @@ p{
   width: 200px;
   height: 200px;
 }
+@media (max-width: 991px){
+  #menu_category_wrap ul{
+    padding-left: 20px!important;
+  }
+  #menu_category_wrap li{
+    font-size: 15px
+  }
+}
+@media (max-width: 767px){
+  .dish_images{
+  width: 30vw;
+  height: 30vw;
+  }
+  .dish_detail_wrap{
+    padding-right: 15px;
+  }
+  #menu_category_wrap ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 15px!important;
+  }
+  #menu_category_wrap li{
+    padding-top: 10px!important;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  #menu_category_wrap a{
+    border: none;
+  }
+  p{
+    font-size: 15px;
+  }
+  .dish_custom_option{
+    font-size: 13px;
+  }
 
+}
 </style>

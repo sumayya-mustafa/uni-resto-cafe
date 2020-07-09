@@ -46,7 +46,8 @@ border-top: 0px;
 border-bottom: solid 1px #ddd!important;
 margin-right: 0px!important;
 list-style: none;
-padding-top: 20px;  
+padding-top: 20px; 
+font-style: bold; 
 }
 #menu_category_wrap li:hover{
 border-bottom-color:#e22a2a!important;
@@ -57,6 +58,9 @@ border-bottom-color:#e22a2a!important;
 #menu_category_wrap li a:hover {
 color: #e22a2a!important;
 text-decoration: none;
+}
+#menu_category_wrap ul{
+  padding-left: 25px;
 }
 
 </style>
